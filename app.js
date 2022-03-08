@@ -9,7 +9,7 @@ const rightButtonEl = document.getElementById('button-right');
 
 const correctTotals = document.getElementById('wins');
 const attemptTotals = document.getElementById('totals');
-const incorrectTotals =document.getElementById('losses')
+const incorrectTotals = document.getElementById('losses');
 
 
 
@@ -17,60 +17,55 @@ const incorrectTotals =document.getElementById('losses')
 let wins = 0;
 let attempts = 0;
 
-console.log(wins, attempts);
+// console.log(wins, attempts);
 
 // set event listeners 
 
 leftButtonEl.addEventListener('click', () =>{
     const correctGuess = getRandomHat();
 
-    handleGuess('left', correctSpot);
+    handleGuess('left', correctGuess);
 });
 
 centerButtonEl.addEventListener('click', () =>{
     const correctGuess = getRandomHat();
-    handleGuess('center', correctSpot);
+    handleGuess('center', correctGuess);
 });
 rightButtonEl.addEventListener('click', () =>{
     const correctGuess = getRandomHat();
-    handleGuess('right', correctSpot);
+    handleGuess('right', correctGuess);
 });
-// function resetSyles()
+// function resetStyles()
 
 function getRandomHat(){
     const hiddenBall = [
         'left',
         'center',
-        'right,'
+        'right',
     ];
     const index = Math.floor(Math.random() * hiddenBall.length);
+    // console.log('index', index);
     return hiddenBall[index];
 }
+
 
 function handleGuess(userGuess, correctGuess){
     attempts ++;
     const correctImage = document.getElementById(`${correctGuess}-hat`); 
     correctImage.src = './assets/ball.png';
-
-    if (userGuess === correctGuess){
+    // console.log('correctImage', correctImage);
+    if (userGuess === 0){
         wins ++;
+        leftHatEl.src = './assets/ball.png';
+    }
+    else if (userGuess === 1){
+        wins ++;
+        centerHatEl.src = './assets/ball.png';
+    } else (userGuess === 2);{
+        wins ++;
+        rightHatEl.src = './assets/ball.png';
     }
   
-  
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
     correctTotals.textContent = wins;
     attemptTotals.textContent = attempts;
     incorrectTotals.textContent = attempts - wins;
