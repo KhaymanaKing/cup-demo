@@ -13,8 +13,30 @@ const attemptTotals = document.getElementById('totals');
 
 
 // let state
+let wins = 0;
+let attempts = 0;
+
+console.log(wins, attempts);
 
 // set event listeners 
+
+leftButtonEl addEventListener('click' () =>{
+
+  attempts++
+} )
+centerButtonEl addEventListener('click' () =>{
+  
+  attempts++
+} 
+rightButtonEl addEventListener('click' () =>{
+  
+  attempts++
+} 
+function resetSyles()
+
+getRandomItem(const arr = [];)
+
+function handleGuess(userGuess, correctSpot)
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
