@@ -92,7 +92,8 @@ footer {
 .hats {
     display: flex;
     flex-direction: row;
-    width: 100px;
+    align-items: flex;
+    height: 500px;
 }
 
 .hat {
@@ -100,5 +101,5 @@ footer {
     flex-direction: column;
 }
 .hat img {
-    width: 400px;
+    width: 300px;
 }

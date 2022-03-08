@@ -24,16 +24,16 @@ console.log(wins, attempts);
 leftButtonEl.addEventListener('click', () =>{
     const correctGuess = getRandomHat();
 
-    handleGuess('left', correctSpot)
+    handleGuess('left', correctSpot);
 });
 
 centerButtonEl.addEventListener('click', () =>{
     const correctGuess = getRandomHat();
-    handleGuess('center', correctSpot)
+    handleGuess('center', correctSpot);
 });
 rightButtonEl.addEventListener('click', () =>{
     const correctGuess = getRandomHat();
-    handleGuess('right', correctSpot)
+    handleGuess('right', correctSpot);
 });
 // function resetSyles()
 
@@ -43,12 +43,18 @@ function getRandomHat(){
         'center',
         'right,'
     ];
+    const index = Math.floor(Math.random() * hiddenBall.length);
+    return hiddenBall[index];
 }
 
 function handleGuess(userGuess, correctGuess){
     attempts ++;
     const correctImage = document.getElementById(`${correctGuess}-hat`); 
     correctImage.src = './assets/ball.png';
+
+    if (userGuess === correctGuess){
+        wins ++;
+    }
   
   
 
@@ -65,10 +71,10 @@ function handleGuess(userGuess, correctGuess){
 
 
 
-  correctTotals.textContent = wins;
-  attemptTotals.textContent = attempts;
-  incorrectTotals.textContent = attempts - wins;
-};
+    correctTotals.textContent = wins;
+    attemptTotals.textContent = attempts;
+    incorrectTotals.textContent = attempts - wins;
+}
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
