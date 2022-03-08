@@ -92,8 +92,7 @@ footer {
 .hats {
     display: flex;
     flex-direction: row;
-    align-items: flex;
-    height: 500px;
+    width: 100px;
 }
 
 .hat {
