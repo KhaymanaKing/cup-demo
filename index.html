@@ -19,20 +19,27 @@
         </div>
     </header>
     <main>
-    <div>
-        <div class="hat">
-        <img src="./assets/cup.png">
-        <button id="button-left">Is it Here?</button>
+    <div class ="hats">
+        <div>
+            <div class="hat">
+            <img src="./assets/cup.png" id = "hat-left">
+            <button id="button-left">Is it Here?</button>
+        </div>
+            <div class="hat">
+            <img src="./assets/cup.png" id = "hat-center">
+            <button id="button-center">Is it Here?</button>
+        </div>
+        </div>
+            <div class="hat" id = "hat-right">
+            <img src="./assets/cup.png">
+            <button id="button-right">Is it Here?</button>
     </div>
-        <div class="hat">
-        <img src="./assets/cup.png">
-        <button id="button-center">Is it Here?</button>
-    </div>
-    </div>
-        <div class="hat">
-        <img src="./assets/cup.png">
-        <button id="button-right">Is it Here?</button>
-    </div>
+        <div class="totals">
+            <div>Correct: <span id="wins">0</span></div>
+            <div>Incorrect: <span id="losses">0</span></div>
+            <div>Attempts: <span id="total">0</span></div>
+        </div>
+    </div>    
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>

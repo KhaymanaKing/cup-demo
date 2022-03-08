@@ -89,6 +89,17 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-.hat img{
-    size: 20 px;
+.hats {
+    display: flex;
+    flex-direction: row;
+    align-items: flex;
+    height: 500px;
+}
+
+.hat {
+    display: flex;
+    flex-direction: column;
+}
+.hat img {
+    width: 400px;
 }
