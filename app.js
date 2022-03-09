@@ -8,7 +8,7 @@ const centerButtonEl = document.getElementById('button-center');
 const rightButtonEl = document.getElementById('button-right');
 
 const correctTotals = document.getElementById('wins');
-const attemptTotals = document.getElementById('totals');
+const attemptTotals = document.getElementById('total');
 const incorrectTotals = document.getElementById('losses');
 
 
@@ -43,26 +43,37 @@ function getRandomHat(){
         'center',
         'right',
     ];
-    const index = Math.floor(Math.random() * hiddenBall.length);
+    const index = Math.floor(Math.random() * 3);
     // console.log('index', index);
     return hiddenBall[index];
 }
 
 
-function handleGuess(userGuess, correctGuess){
-    attempts ++;
-    const correctImage = document.getElementById(`${correctGuess}-hat`); 
+
+
+function handleGuess(userGuess, correctGuess){ 
+    leftHatEl.src = './assets/cup.png';
+    centerHatEl.src = './assets/cup.png';
+    rightHatEl.src = './assets/cup.png';  
+    
+    attempts++;
+    
+    const correctImage = document.getElementById(`hat-${correctGuess}`); 
     correctImage.src = './assets/ball.png';
     // console.log('correctImage', correctImage);
-    if (userGuess === 0){
-        wins ++;
+    if (userGuess === correctGuess){
+        wins++;
+    }
+
+    if (correctGuess === 0){
+        
         leftHatEl.src = './assets/ball.png';
     }
-    else if (userGuess === 1){
-        wins ++;
+    else if (correctGuess === 1){
+        
         centerHatEl.src = './assets/ball.png';
-    } else (userGuess === 2);{
-        wins ++;
+    } else (correctGuess === 2);{
+        
         rightHatEl.src = './assets/ball.png';
     }
   
