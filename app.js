@@ -53,9 +53,7 @@ function getRandomHat(){
 
 
 function handleGuess(userGuess, correctGuess){ 
-    leftHatEl.src = './assets/cup.png';
-    centerHatEl.src = './assets/cup.png';
-    rightHatEl.src = './assets/cup.png';
+    resetStyles()
     
     attempts++;
     
@@ -81,6 +79,11 @@ function handleGuess(userGuess, correctGuess){
     correctTotals.textContent = wins;
     attemptTotals.textContent = attempts;
     incorrectTotals.textContent = attempts - wins;
+}
+function resetStyles() {
+    leftHatEl.src = './assets/cup.png';
+    centerHatEl.src = './assets/cup.png';
+    rightHatEl.src = './assets/cup.png';
 }
   // get user input
   // use user input to update state 
