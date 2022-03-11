@@ -29,13 +29,14 @@ leftButtonEl.addEventListener('click', () =>{
 
 centerButtonEl.addEventListener('click', () =>{
     const correctGuess = getRandomHat();
+
     handleGuess('center', correctGuess);
 });
 rightButtonEl.addEventListener('click', () =>{
     const correctGuess = getRandomHat();
+
     handleGuess('right', correctGuess);
 });
-// function resetStyles()
 
 function getRandomHat(){
     const hiddenBall = [
@@ -43,7 +44,7 @@ function getRandomHat(){
         'center',
         'right',
     ];
-    const index = Math.floor(Math.random() * 3);
+    const index = Math.floor(Math.random() * hiddenBall.length);
     // console.log('index', index);
     return hiddenBall[index];
 }
@@ -54,7 +55,7 @@ function getRandomHat(){
 function handleGuess(userGuess, correctGuess){ 
     leftHatEl.src = './assets/cup.png';
     centerHatEl.src = './assets/cup.png';
-    rightHatEl.src = './assets/cup.png';  
+    rightHatEl.src = './assets/cup.png';
     
     attempts++;
     
@@ -72,11 +73,11 @@ function handleGuess(userGuess, correctGuess){
     else if (correctGuess === 1){
         
         centerHatEl.src = './assets/ball.png';
-    } else (correctGuess === 2);{
+    } else if (correctGuess === 2){
         
         rightHatEl.src = './assets/ball.png';
     }
-  
+
     correctTotals.textContent = wins;
     attemptTotals.textContent = attempts;
     incorrectTotals.textContent = attempts - wins;
