@@ -53,7 +53,7 @@ function getRandomHat(){
 
 
 function handleGuess(userGuess, correctGuess){ 
-    resetStyles()
+    resetStyles();
     
     attempts++;
     
