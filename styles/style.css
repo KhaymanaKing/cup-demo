@@ -33,24 +33,15 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    justify-content: space-around;
+    align-content: center;
 }
 
 section {
     background-color: var(--color5);
     max-width: 80%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: solid 1px black;
 }
 
 header {
@@ -78,7 +69,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +79,18 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.hats {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 75%;
+    height: 75%;
+}
+
+
+.hatitem img{
+    width: 100%;
+    height: 100%;
 }
